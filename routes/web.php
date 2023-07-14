@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\StudentController;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function () {
+    Log::info('Ini adalah log info');
+});
 
 Route::get('/students', [StudentController::class, 'index']);
