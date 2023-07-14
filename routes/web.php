@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    Log::info('Ini adalah log info');
+    Log::warning('Ini adalah log warning');
 });
 
 Route::get('/students', [StudentController::class, 'index']);
